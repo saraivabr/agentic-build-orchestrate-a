@@ -1,16 +1,16 @@
 # agentic-build-orchestrate-a
 
-This is a [Next.js](https://nextjs.org) project bootstrapped with [v0](https://v0.app).
+Este é um projeto [Next.js](https://nextjs.org) inicializado com [v0](https://v0.app).
 
-## Built with v0
+## Construído com v0
 
-This repository is linked to a [v0](https://v0.app) project. You can continue developing by visiting the link below -- start new chats to make changes, and v0 will push commits directly to this repo. Every merge to `main` will automatically deploy.
+Este repositório está vinculado a um projeto [v0](https://v0.app). Você pode continuar o desenvolvimento no link abaixo — inicie novos chats para fazer alterações e o v0 enviará commits diretamente para este repositório. Cada merge na `main` fará deploy automático.
 
-[Continue working on v0 →](https://v0.app/chat/projects/prj_9lMHG258LO2KaeeF0BsItQUWoOj5)
+[Continuar no v0 →](https://v0.app/chat/projects/prj_9lMHG258LO2KaeeF0BsItQUWoOj5)
 
-## Getting Started
+## Primeiros passos
 
-First, run the development server:
+Primeiro, rode o servidor de desenvolvimento:
 
 ```bash
 npm run dev
@@ -20,14 +20,14 @@ yarn dev
 pnpm dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Abra [http://localhost:3000](http://localhost:3000) no navegador para ver o resultado.
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+Você pode começar a editar a página alterando `app/page.tsx`. A página atualiza automaticamente enquanto você edita o arquivo.
 
-## Learn More
+## Saiba mais
 
-To learn more, take a look at the following resources:
+Para saber mais, veja os recursos abaixo:
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-- [v0 Documentation](https://v0.app/docs) - learn about v0 and how to use it.
+- [Documentação do Next.js](https://nextjs.org/docs) - conheça recursos e API do Next.js.
+- [Aprenda Next.js](https://nextjs.org/learn) - tutorial interativo de Next.js.
+- [Documentação do v0](https://v0.app/docs) - entenda o v0 e como usar.

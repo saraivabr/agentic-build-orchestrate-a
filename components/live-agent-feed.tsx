@@ -9,29 +9,29 @@ const AGENT_NAMES = [
 ]
 
 const TASKS = [
-  "Reviewing 14 open PRs on main branch",
-  "Summarizing weekly Slack threads",
-  "Generating Q2 financial report",
-  "Running integration test suite",
-  "Scraping competitor pricing data",
-  "Drafting 23 cold emails from CRM",
-  "Parsing inbound invoices → DB",
-  "Monitoring uptime across 8 regions",
-  "Refactoring auth module — 3 files",
-  "Analyzing user churn signals",
-  "Syncing Notion docs with Linear",
-  "Tagging 1,200 support tickets",
-  "Deploying to staging environment",
-  "Processing webhook payloads",
+  "Revisando 14 PRs abertos na branch main",
+  "Resumindo threads semanais do Slack",
+  "Gerando relatório financeiro do 2º trimestre",
+  "Executando suíte de testes de integração",
+  "Coletando dados de preços da concorrência",
+  "Escrevendo 23 e-mails frios a partir do CRM",
+  "Processando faturas recebidas → DB",
+  "Monitorando disponibilidade em 8 regiões",
+  "Refatorando módulo de autenticação — 3 arquivos",
+  "Analisando sinais de churn de usuários",
+  "Sincronizando docs do Notion com o Linear",
+  "Classificando 1.200 tickets de suporte",
+  "Publicando em ambiente de staging",
+  "Processando payloads de webhook",
 ]
 
 const REGIONS = ["us-east", "eu-west", "ap-south", "us-west", "eu-central"]
 const STATUSES = [
-  { label: "running",  color: "#4ade80" },
-  { label: "running",  color: "#4ade80" },
-  { label: "running",  color: "#4ade80" },
-  { label: "queued",   color: "#facc15" },
-  { label: "complete", color: "#60a5fa" },
+  { label: "em execução",  color: "#4ade80" },
+  { label: "em execução",  color: "#4ade80" },
+  { label: "em execução",  color: "#4ade80" },
+  { label: "na fila",   color: "#facc15" },
+  { label: "concluído", color: "#60a5fa" },
 ]
 
 type AgentRow = {
@@ -88,12 +88,12 @@ function ProgressBar({ initial }: { initial: number }) {
 
 // Stable seed rows — same on server and client, no random values
 const SEED_ROWS: AgentRow[] = [
-  { id: "A1B2C3", name: "analyst-7f2a",    task: "Generating Q2 financial report",       region: "us-east",    status: STATUSES[0], progress: 42, elapsed: "3m 12s", key: 0 },
-  { id: "D4E5F6", name: "executor-3b1c",   task: "Running integration test suite",       region: "eu-west",    status: STATUSES[0], progress: 67, elapsed: "7m 48s", key: 1 },
-  { id: "G7H8I9", name: "researcher-2c8f", task: "Scraping competitor pricing data",     region: "us-west",    status: STATUSES[3], progress: 18, elapsed: "1m 05s", key: 2 },
-  { id: "J0K1L2", name: "planner-5a3d",    task: "Syncing Notion docs with Linear",      region: "eu-central", status: STATUSES[0], progress: 55, elapsed: "5m 30s", key: 3 },
-  { id: "M3N4O5", name: "coder-8d1a",      task: "Refactoring auth module — 3 files",    region: "ap-south",   status: STATUSES[0], progress: 80, elapsed: "11m 22s", key: 4 },
-  { id: "P6Q7R8", name: "monitor-9d4e",    task: "Monitoring uptime across 8 regions",   region: "us-east",    status: STATUSES[4], progress: 99, elapsed: "14m 01s", key: 5 },
+  { id: "A1B2C3", name: "analyst-7f2a",    task: "Gerando relatório financeiro do 2º trimestre",       region: "us-east",    status: STATUSES[0], progress: 42, elapsed: "3m 12s", key: 0 },
+  { id: "D4E5F6", name: "executor-3b1c",   task: "Executando suíte de testes de integração",       region: "eu-west",    status: STATUSES[0], progress: 67, elapsed: "7m 48s", key: 1 },
+  { id: "G7H8I9", name: "researcher-2c8f", task: "Coletando dados de preços da concorrência",     region: "us-west",    status: STATUSES[3], progress: 18, elapsed: "1m 05s", key: 2 },
+  { id: "J0K1L2", name: "planner-5a3d",    task: "Sincronizando docs do Notion com o Linear",      region: "eu-central", status: STATUSES[0], progress: 55, elapsed: "5m 30s", key: 3 },
+  { id: "M3N4O5", name: "coder-8d1a",      task: "Refatorando módulo de autenticação — 3 arquivos",    region: "ap-south",   status: STATUSES[0], progress: 80, elapsed: "11m 22s", key: 4 },
+  { id: "P6Q7R8", name: "monitor-9d4e",    task: "Monitorando disponibilidade em 8 regiões",   region: "us-east",    status: STATUSES[4], progress: 99, elapsed: "14m 01s", key: 5 },
 ]
 
 export function LiveAgentFeed() {
@@ -128,7 +128,7 @@ export function LiveAgentFeed() {
         borderBottom: "1px solid rgba(0,0,0,0.06)",
         background: "rgba(0,0,0,0.03)",
       }}>
-        {["AGENT", "TASK", "REGION", "STATUS"].map(h => (
+        {["AGENTE", "TAREFA", "REGIÃO", "STATUS"].map(h => (
           <span key={h} style={{ fontSize: 8, letterSpacing: "0.16em", color: "rgba(0,0,0,0.30)", fontFamily: "monospace" }}>{h}</span>
         ))}
       </div>
@@ -171,8 +171,8 @@ export function LiveAgentFeed() {
               <span style={{
                 width: 5, height: 5, borderRadius: "50%",
                 background: row.status.color,
-                boxShadow: row.status.label === "running" ? `0 0 6px ${row.status.color}` : "none",
-                animation: row.status.label === "running" ? "statusPulse 2s ease-in-out infinite" : "none",
+                boxShadow: row.status.label === "em execução" ? `0 0 6px ${row.status.color}` : "none",
+                animation: row.status.label === "em execução" ? "statusPulse 2s ease-in-out infinite" : "none",
                 flexShrink: 0,
               }} />
               <span style={{ fontSize: 8, fontFamily: "monospace", color: "rgba(0,0,0,0.35)" }}>{row.status.label}</span>
@@ -217,7 +217,7 @@ export function LiveAgentCounter() {
       letterSpacing: "-0.02em",
       transition: "color 0.3s ease",
     }}>
-      {mounted ? count.toLocaleString("en-US") : "3,847"}
+      {mounted ? count.toLocaleString("pt-BR") : "3,847"}
     </span>
   )
 }

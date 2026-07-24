@@ -11,21 +11,21 @@ const _courierPrime = Courier_Prime({ weight: ["400", "700"], subsets: ["latin"]
 const _ibmPlexSans = IBM_Plex_Sans({ weight: ["300", "400", "500", "600"], subsets: ["latin"] });
 
 export const metadata: Metadata = {
-  title: 'Agentic — Autonomous AI Agents at Scale',
-  description: 'Deploy autonomous AI agents that think, act, and execute across any workflow. Connect 200+ integrations, run agents in parallel, and ship faster with the Agentic platform.',
-  keywords: ['AI agents', 'autonomous agents', 'LLM orchestration', 'AI automation', 'multi-agent platform'],
+  title: 'Agentic — Agentes de IA Autônomos em Escala',
+  description: 'Implante agentes de IA autônomos que pensam, agem e executam em qualquer fluxo de trabalho. Conecte mais de 200 integrações, rode agentes em paralelo e entregue mais rápido com a plataforma Agentic.',
+  keywords: ['agentes de IA', 'agentes autônomos', 'orquestração de LLM', 'automação com IA', 'plataforma multiagente'],
   authors: [{ name: 'Agentic' }],
   openGraph: {
-    title: 'Agentic — Autonomous AI Agents at Scale',
-    description: 'Deploy autonomous AI agents that think, act, and execute across any workflow.',
+    title: 'Agentic — Agentes de IA Autônomos em Escala',
+    description: 'Implante agentes de IA autônomos que pensam, agem e executam em qualquer fluxo de trabalho.',
     type: 'website',
     url: 'https://agentic.ai',
     siteName: 'Agentic',
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'Agentic — Autonomous AI Agents at Scale',
-    description: 'Deploy autonomous AI agents that think, act, and execute across any workflow.',
+    title: 'Agentic — Agentes de IA Autônomos em Escala',
+    description: 'Implante agentes de IA autônomos que pensam, agem e executam em qualquer fluxo de trabalho.',
   },
   icons: {
     icon: [
@@ -52,7 +52,7 @@ export default function RootLayout({
   children: React.ReactNode
 }>) {
   return (
-    <html lang="en">
+    <html lang="pt-BR">
       <body className={`font-sans antialiased`}>
         {children}
         <Analytics />

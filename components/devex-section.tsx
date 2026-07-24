@@ -5,26 +5,26 @@ import { useState, useEffect } from "react"
 const STEPS = [
   {
     num: "01",
-    title: "Install SDK",
-    desc: "One command to get started",
+    title: "Instalar SDK",
+    desc: "Um comando para começar",
     file: "terminal",
     lang: "bash",
     code: [
-      { type: "comment", text: "# Install the Agentic SDK" },
+      { type: "comment", text: "# Instale o SDK da Agentic" },
       { type: "command", text: "npm install @agentic/sdk" },
       { type: "gap" },
-      { type: "comment", text: "# Initialize your project" },
+      { type: "comment", text: "# Inicialize seu projeto" },
       { type: "command", text: "npx agentic init" },
       { type: "gap" },
-      { type: "output", text: "✓ Project initialized" },
-      { type: "output", text: "✓ Config file created" },
-      { type: "output", text: "✓ Ready to build" },
+      { type: "output", text: "✓ Projeto inicializado" },
+      { type: "output", text: "✓ Arquivo de configuração criado" },
+      { type: "output", text: "✓ Pronto para construir" },
     ],
   },
   {
     num: "02",
-    title: "Define Agent",
-    desc: "TypeScript-first agent class",
+    title: "Definir agente",
+    desc: "Classe de agente focada em TypeScript",
     file: "agents/researcher.ts",
     lang: "typescript",
     code: [
@@ -43,12 +43,12 @@ const STEPS = [
   },
   {
     num: "03",
-    title: "Add Memory",
-    desc: "Persistent conversation context",
+    title: "Adicionar memória",
+    desc: "Contexto de conversa persistente",
     file: "agents/memory.ts",
     lang: "typescript",
     code: [
-      { type: "comment", text: "// Add long-term memory to any agent" },
+      { type: "comment", text: "// Adicione memória de longo prazo a qualquer agente" },
       { type: "keyword", text: "import", after: " { VectorMemory } ", keyword2: "from", string: " '@agentic/memory'" },
       { type: "gap" },
       { type: "keyword", text: "const", after: " memory ", keyword2: "=", keyword3: " new ", fn: "VectorMemory", args: "({" },
@@ -56,25 +56,25 @@ const STEPS = [
       { type: "prop", key: "  namespace", val: "'researcher'" },
       { type: "plain", text: "})" },
       { type: "gap" },
-      { type: "comment", text: "// Attach to agent" },
+      { type: "comment", text: "// Anexar ao agente" },
       { type: "plain", text: "researcher.use(memory)" },
     ],
   },
   {
     num: "04",
-    title: "Deploy",
-    desc: "One command to production",
+    title: "Publicar",
+    desc: "Um comando para produção",
     file: "terminal",
     lang: "bash",
     code: [
-      { type: "comment", text: "# Deploy to Agentic Cloud" },
+      { type: "comment", text: "# Publicar na Agentic Cloud" },
       { type: "command", text: "agentic deploy --prod" },
       { type: "gap" },
-      { type: "output", text: "  Building agent..." },
-      { type: "output", text: "  Running tests..." },
-      { type: "output", text: "  Deploying to edge..." },
+      { type: "output", text: "  Construindo agente..." },
+      { type: "output", text: "  Executando testes..." },
+      { type: "output", text: "  Publicando na edge..." },
       { type: "gap" },
-      { type: "success", text: "✓ researcher deployed" },
+      { type: "success", text: "✓ researcher publicado" },
       { type: "url", text: "  → https://agents.agentic.dev/researcher" },
     ],
   },
@@ -147,10 +147,10 @@ export function DevExSection() {
       <div className="max-w-6xl mx-auto">
         <div className="mb-16">
           <div className="mt-4 inline-flex items-center gap-2 px-3 py-1.5 rounded-full bg-black/[0.05] border border-black/[0.06] text-[10px] tracking-widest text-black/40 uppercase">
-            Developer Experience
+            Experiência do Desenvolvedor
           </div>
           <h2 className="mt-5 text-4xl md:text-5xl font-light tracking-tight leading-[1.05]">
-            Built for developers.<br />Loved by teams.
+            Feito para devs.<br />Amado por equipes.
           </h2>
         </div>
 
